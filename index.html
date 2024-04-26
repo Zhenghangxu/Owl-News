@@ -17,7 +17,7 @@
     <title>Owl News | Spotlight</title>
   </head>
   <body>
-    <nav id="main-nav" class="snap-child">
+    <nav id="main-nav">
       <div class="nav-container">
         <div class="logo-container">
           <img src="./img/logo.png" alt="Owl News" class="logo" />
@@ -32,23 +32,26 @@
       </div>
     </nav>
     <!-- showcase area -->
-    <header id="showcase" class="snap-child">
+    <header id="showcase">
       <div class="showcase-container">
         <span class="category category-sport">Sport</span>
-        <h1>Spotlight Today</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          maxime expedita quis delectus natus aperiam dignissimos animi minima
-          voluptatem deserunt repellendus at dolore pariatur voluptas, vero
-          culpa quaerat tempora. Eaque.
-        </p>
-        <br></br>
-        <button class="button btn-lg">Read More</button>
+        <div class="">
+          <h1>Spotlight Today</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            maxime expedita quis delectus natus aperiam dignissimos animi minima
+            voluptatem deserunt repellendus at dolore pariatur voluptas, vero
+            culpa quaerat tempora. Eaque.
+          </p>
+          <br></br>
+          <a class="btn-lg" href="#">Read More <i class="fas fa-arrow-right"></i></a> 
+        </div>
       </div>
-      <div class="scroll-indicator"><i class="fas fa-chevron-down"></i> Scroll To Find Out More</div>
+      <div class="parallax-container">
+        <img src="./img/showcase.jpg" class="parallax" alt="showcase" />
+      </div>
     </header>
-    <section id="news-grid" class="snap-child" >
-      <div class="breaker"></div>
+    <section id="news-grid" >
       <div class="grid-container">
         <div class="item-0 card-margin-offset">
           <h4>Latest News</h4>
@@ -56,7 +59,7 @@
           <br></br>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quisquam odit nihil autem, ipsa voluptatum eum earum recusandae soluta? Voluptatibus!</p>
         </div>
-        <div class="item-1 item-row">
+        <div class="item-1 item-col">
           <img
             class="thumbnail"
             src="./img/articles/tech1.jpg"
@@ -64,7 +67,7 @@
           />
           <div class="news-content">
             <span class="category category-tech">Technology</span>
-            <a href="./article.html">Lorem ipsum dolor sit amet.</a>
+            <a href="./article.html" class="title">Lorem ipsum dolor sit amet.</a>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -72,10 +75,10 @@
             </p>
           </div>
         </div>
-        <div class="item-2 card-margin-offset item-col">
+        <div class="item-2 item-col">
           <div class="news-content">
             <span class="category category-sport">Sports</span>
-            <a href="./article.html">Lorem ipsum dolor sit amet.</a>
+            <a href="./article.html" class="title">Lorem ipsum dolor sit amet.</a>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -83,7 +86,7 @@
             </p>
           </div>
         </div>
-        <div class="item-3 card-margin-offset item-col">
+        <div class="item-3   item-col">
           <img
             class="thumbnail"
             src="./img/articles/ent1.jpg"
@@ -91,7 +94,7 @@
           />
           <div class="news-content">
             <span class="category category-ent">Entertainment</span>
-            <a href="./article.html">Lorem ipsum dolor sit amet.</a>
+            <a href="./article.html" class="title">Lorem ipsum dolor sit amet.</a>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -107,7 +110,7 @@
           />
           <div class="news-content">
             <span class="category category-sport">Sport</span>
-            <a href="./article.html">Lorem ipsum dolor sit amet.</a>
+            <a href="./article.html" class="title">Lorem ipsum dolor sit amet.</a>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -115,7 +118,7 @@
             </p>
           </div>
         </div>
-        <div class="item-5 card-margin-offset item-col">
+        <div class="item-5   item-col">
           <img
             class="thumbnail"
             src="./img/articles/ent2.jpg"
@@ -123,7 +126,7 @@
           />
           <div class="news-content">
             <span class="category category-ent">Entertainment</span>
-            <a href="./article.html">Lorem ipsum dolor sit amet.</a>
+            <a href="./article.html" class="title">Lorem ipsum dolor sit amet.</a>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -134,7 +137,7 @@
         <div class="item-6 item-col">
           <div class="news-content">
             <span class="category category-sport">Sport</span>
-            <a href="./article.html">Lorem ipsum dolor sit amet.</a>
+            <a href="./article.html" class="title">Lorem ipsum dolor sit amet.</a>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -150,7 +153,7 @@
           />
           <div class="news-content">
             <span class="category category-tech">Technology</span>
-            <a>Lorem ipsum dolor sit amet.</a>
+            <a class="title">Lorem ipsum dolor sit amet.</a>
             <p href="./article.html">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               distinctio mollitia quibusdam laboriosam optio repudiandae
@@ -160,7 +163,7 @@
         </div>
       </div>
     </section>
-    <footer class="snap-child">
+    <footer>
       <div class="footer-container">
         <div class="fe org-intro">
           <div class="logo-container">
@@ -202,4 +205,6 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+  <script src="scripts/scripts.js"></script>
 </html>
