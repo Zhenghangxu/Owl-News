@@ -141,7 +141,49 @@ h6 {
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: width 0.3s;
 }
+
+#main-nav.shrink {
+  width: 85px;
+}
+#main-nav.shrink .logo-container p{
+  display: none;
+}
+#main-nav.shrink .topics{
+  display: none;
+}
+#main-nav.grow {
+  width: 100%;
+}
+
+.shrink {
+  animation: 0.3s shrink ease-in-out;
+}
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 85px;
+  }
+}
+
+.grow {
+  animation: 0.3s grow ease-in-out;
+}
+
+@keyframes grow {
+  0% {
+    width: 85px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   #main-nav {
     width: 100%;
@@ -272,6 +314,12 @@ html {
   transition: transform 0.3s;
 }
 
+.btn-lg:hover span {
+  transform: translateX(-15px);
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
 .topics > li > a.current {
   background: rgba(57, 57, 57, var(--nav-pass-through));
   backdrop-filter: blur(6.5px);
@@ -320,6 +368,7 @@ img.test{
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
 }
 
 .parallax-container:before {
@@ -355,6 +404,12 @@ img.test{
   background-color: var(--light-blue);
   margin-top: 0.4rem;
 }
+.showcase-container p {
+  font-size: 1.4rem;
+  display: inline;
+  padding: 0.2rem;
+  margin-top: 0.4rem;
+}
 
 /* News Grid */
 /* grid structure */
@@ -380,6 +435,7 @@ img.test{
 }
 .item-0 {
   grid-area: item-0;
+  cursor: auto !important;
   background-color: transparent !important;
   color: var(--light) !important;
   font-size: 1.3rem;
@@ -387,6 +443,12 @@ img.test{
   border-left: 12px solid var(--light);
   border-radius: 0 !important;
 }
+
+.item-0:hover{
+  transform: none !important;
+  background: none !important;
+}
+
 .item-0 h4,
 .item-0 h3 {
   text-align: left;
@@ -445,11 +507,24 @@ h4 {
   margin-bottom: 1.4rem;
 }
 .grid-container > div {
-  background: var(--black);
-  padding: 1.3rem;
+  /* background: var(--black); */
+  padding: 2rem;
   color: var(--light);
   border-radius: var(--border-radius-1);
-  box-shadow: 0 1px 1px 0 var(--shadow-color);
+  box-shadow: 1px 1px 3px 0px var(--shadow-color);
+  gap: 6px;
+  transition: all 0.3s;
+}
+.grid-container > div:hover {
+  box-shadow: 0px 0px 2px 0 var(--light);
+  transform: scale(1.02);
+  cursor: pointer;
+  background: linear-gradient(92.59deg, rgba(120, 120, 120, 0.34) 11.69%, rgba(217, 217, 217, 0) 94.6%);
+
+}
+.grid-container > div:hover img {
+  transform: scale(0.98);
+  transition: all 0.3s;
 }
 /* content orientation */
 .item-row {
