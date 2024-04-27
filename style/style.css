@@ -147,7 +147,6 @@ h6 {
 #main-nav.shrink {
   width: 85px;
   margin-left: 20px;
-  transition: all 0.3s;
 }
 #main-nav.shrink .logo-container p {
   display: none;
@@ -168,7 +167,7 @@ h6 {
     width: 100%;
     margin: auto;
   }
-  60% {
+  30% {
     width: 85px;
   }
   100% {
@@ -185,6 +184,9 @@ h6 {
   0% {
     width: 85px;
     margin-left: 20px;
+  }
+  30% {
+    width: 85px;
   }
   100% {
     width: 100%;
@@ -625,7 +627,6 @@ footer .fe {
 
 /* bottom banner */
 .bottom-banner {
-  background-color: var(--grey);
   border-radius: var(--border-radius-1);
   grid-column: 1 / span 4;
   display: flex;
